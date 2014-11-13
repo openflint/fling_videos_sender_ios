@@ -119,7 +119,7 @@ static NSString *kReceiverAppURL; //Receiver app url
     [[MSFKDeviceManager alloc] initWithDevice:self.selectedDevice
                            clientPackageName:appIdentifier];
     self.deviceManager.delegate = self;
-    self.deviceManager.appId = @"~browser";
+    self.deviceManager.appId = @"~flintplayer";
     //kReceiverAppID = @"E9C6F80E"; //Matchstick APP ID also allowed
 //    kReceiverAppID = [self.deviceManager makeApplicationId:kReceiverAppURL];
     kReceiverAppID = kReceiverAppURL;
