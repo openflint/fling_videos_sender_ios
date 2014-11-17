@@ -20,7 +20,6 @@
 		284CBD9C182ADC2D007F65F9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284CBD9A182ADC2D007F65F9 /* Main_iPad.storyboard */; };
 		284CBD9F182ADC2D007F65F9 /* MediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CBD9E182ADC2D007F65F9 /* MediaTableViewController.m */; };
 		284CBDA2182ADC2D007F65F9 /* LocalPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CBDA1182ADC2D007F65F9 /* LocalPlayerViewController.m */; };
-		284CBDA4182ADC2D007F65F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284CBDA3182ADC2D007F65F9 /* Images.xcassets */; };
 		284CBDAB182ADC2D007F65F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284CBDAA182ADC2D007F65F9 /* XCTest.framework */; };
 		284CBDAC182ADC2D007F65F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284CBD85182ADC2D007F65F9 /* Foundation.framework */; };
 		284CBDAD182ADC2D007F65F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284CBD89182ADC2D007F65F9 /* UIKit.framework */; };
@@ -29,7 +28,6 @@
 		491627AF184FBF9C00351397 /* SimpleImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 491627AE184FBF9C00351397 /* SimpleImageFetcher.m */; };
 		496D46FE182DBE9100343F72 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 496D46FD182DBE9100343F72 /* Media.m */; };
 		496D4701182DBE9C00343F72 /* MediaListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 496D4700182DBE9C00343F72 /* MediaListModel.m */; };
-		ED2D9C8C1A0F7D3400957E83 /* Matchstick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDADCB751A0F735100B14019 /* Matchstick.framework */; };
 		ED2D9CF51A0F7FA300957E83 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2D9CF41A0F7FA300957E83 /* libicucore.dylib */; };
 		ED2D9CF71A0F7FAB00957E83 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2D9CF61A0F7FAB00957E83 /* CFNetwork.framework */; };
 		ED2D9CF91A0F7FB700957E83 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2D9CF81A0F7FB700957E83 /* Security.framework */; };
@@ -186,6 +184,8 @@
 		ED2D9E2A1A0F812600957E83 /* prev_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2D9D911A0F812600957E83 /* prev_black@2x.png */; };
 		ED2D9E2B1A0F812600957E83 /* video_thumb_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2D9D921A0F812600957E83 /* video_thumb_mini.png */; };
 		ED2D9E2C1A0F812600957E83 /* video_thumb_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2D9D931A0F812600957E83 /* video_thumb_mini@2x.png */; };
+		ED9E79601A15BD2A00B6827A /* Matchstick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9E795F1A15BD2A00B6827A /* Matchstick.framework */; };
+		EDA890761A19E1B000B826DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA890751A19E1B000B826DD /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,7 +220,6 @@
 		284CBD9E182ADC2D007F65F9 /* MediaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewController.m; sourceTree = "<group>"; };
 		284CBDA0182ADC2D007F65F9 /* LocalPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalPlayerViewController.h; sourceTree = "<group>"; };
 		284CBDA1182ADC2D007F65F9 /* LocalPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LocalPlayerViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		284CBDA3182ADC2D007F65F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		284CBDA9182ADC2D007F65F9 /* FlingVideosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlingVideosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		284CBDAA182ADC2D007F65F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		284CC030182B1891007F65F9 /* MatchstickDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MatchstickDeviceController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -389,7 +388,8 @@
 		ED2D9D911A0F812600957E83 /* prev_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prev_black@2x.png"; sourceTree = "<group>"; };
 		ED2D9D921A0F812600957E83 /* video_thumb_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_thumb_mini.png; sourceTree = "<group>"; };
 		ED2D9D931A0F812600957E83 /* video_thumb_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video_thumb_mini@2x.png"; sourceTree = "<group>"; };
-		EDADCB751A0F735100B14019 /* Matchstick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Matchstick.framework; sourceTree = "<group>"; };
+		ED9E795F1A15BD2A00B6827A /* Matchstick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Matchstick.framework; sourceTree = "<group>"; };
+		EDA890751A19E1B000B826DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,7 +400,7 @@
 				ED2D9CF91A0F7FB700957E83 /* Security.framework in Frameworks */,
 				ED2D9CF71A0F7FAB00957E83 /* CFNetwork.framework in Frameworks */,
 				ED2D9CF51A0F7FA300957E83 /* libicucore.dylib in Frameworks */,
-				ED2D9C8C1A0F7D3400957E83 /* Matchstick.framework in Frameworks */,
+				ED9E79601A15BD2A00B6827A /* Matchstick.framework in Frameworks */,
 				12E0CCBD18511D8400447896 /* AVFoundation.framework in Frameworks */,
 				284CBD88182ADC2D007F65F9 /* CoreGraphics.framework in Frameworks */,
 				284CBD8A182ADC2D007F65F9 /* UIKit.framework in Frameworks */,
@@ -443,10 +443,10 @@
 		284CBD84182ADC2D007F65F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED9E795F1A15BD2A00B6827A /* Matchstick.framework */,
 				ED2D9CF81A0F7FB700957E83 /* Security.framework */,
 				ED2D9CF61A0F7FAB00957E83 /* CFNetwork.framework */,
 				ED2D9CF41A0F7FA300957E83 /* libicucore.dylib */,
-				EDADCB751A0F735100B14019 /* Matchstick.framework */,
 				12E0CCBB184FFD9B00447896 /* AVFoundation.framework */,
 				284CBD85182ADC2D007F65F9 /* Foundation.framework */,
 				284CBD87182ADC2D007F65F9 /* CoreGraphics.framework */,
@@ -459,6 +459,7 @@
 		284CBD8B182ADC2D007F65F9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EDA890751A19E1B000B826DD /* Images.xcassets */,
 				496D46FC182DBE9100343F72 /* Media.h */,
 				496D46FD182DBE9100343F72 /* Media.m */,
 				496D46FF182DBE9C00343F72 /* MediaListModel.h */,
@@ -481,7 +482,6 @@
 				12E0CCB9184FEF4F00447896 /* VolumeChangeController.m */,
 				491627AD184FBF9C00351397 /* SimpleImageFetcher.h */,
 				491627AE184FBF9C00351397 /* SimpleImageFetcher.m */,
-				284CBDA3182ADC2D007F65F9 /* Images.xcassets */,
 				284CBD8C182ADC2D007F65F9 /* Supporting Files */,
 			);
 			path = Classes;
@@ -824,7 +824,6 @@
 				ED2D9DFF1A0F812600957E83 /* list_outline.png in Resources */,
 				ED2D9DE31A0F812600957E83 /* icon_settings_black.png in Resources */,
 				ED2D9D9A1A0F812600957E83 /* cast_on0.png in Resources */,
-				284CBDA4182ADC2D007F65F9 /* Images.xcassets in Resources */,
 				ED2D9DE01A0F812600957E83 /* icon_play_solid_black@2x.png in Resources */,
 				ED2D9E1F1A0F812600957E83 /* pause_dark.png in Resources */,
 				ED2D9E151A0F812600957E83 /* media_prev_black.png in Resources */,
@@ -840,6 +839,7 @@
 				ED2D9E281A0F812600957E83 /* play_light@2x.png in Resources */,
 				ED2D9E0A1A0F812600957E83 /* logo_castvideos@2x.png in Resources */,
 				ED2D9D9B1A0F812600957E83 /* cast_on0@2x.png in Resources */,
+				EDA890761A19E1B000B826DD /* Images.xcassets in Resources */,
 				ED2D9DFD1A0F812600957E83 /* icon_volume3_black.png in Resources */,
 				ED2D9DAD1A0F812600957E83 /* cast_solid_custom.png in Resources */,
 				ED2D9DA91A0F812600957E83 /* cast_solid.png in Resources */,
@@ -1056,8 +1056,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang Lu (8JRLSM9PNG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiang Lu (8JRLSM9PNG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					.,
@@ -1085,8 +1085,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiang Lu (8JRLSM9PNG)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jiang Lu (8JRLSM9PNG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					.,

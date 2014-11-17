@@ -226,7 +226,6 @@ static NSString *kReceiverAppURL; //Receiver app url
 
 - (void)      deviceManager:(MSFKDeviceManager *)deviceManager
 didConnectToFlingApplication:(MSFKApplicationMetadata *)applicationMetadata
-                  sessionID:(NSString *)sessionID
         launchedApplication:(BOOL)launchedApplication {
     
     NSLog(@"application has launched");
@@ -571,22 +570,27 @@ didCompleteLoadWithSessionID:(NSInteger)sessionID {
     self.toolbarSubTitleLabel.text =
     [self.mediaInformation.metadata stringForKey:kMSFKMetadataKeySubtitle];
     
-    // Update the image.
-    MSFKImage *img = [self.mediaInformation.metadata.images objectAtIndex:0];
-    if ([img.URL isEqual:self.toolbarThumbnailURL]) {
-        return;
+    if(self.mediaInformation.metadata.images.count > 0) {
+        // Update the image.
+        MSFKImage *img = [self.mediaInformation.metadata.images objectAtIndex:0];
+        
+        if ([img.URL isEqual:self.toolbarThumbnailURL]) {
+            return;
+        }
+        
+        //Loading thumbnail async
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *image = [UIImage imageWithData:[SimpleImageFetcher getDataFromImageURL:img.URL]];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"Loaded thumbnail image");
+                self.toolbarThumbnailURL = img.URL;
+                self.toolbarThumbnailImage.image = image;
+            });
+        });
     }
     
-    //Loading thumbnail async
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image = [UIImage imageWithData:[SimpleImageFetcher getDataFromImageURL:img.URL]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSLog(@"Loaded thumbnail image");
-            self.toolbarThumbnailURL = img.URL;
-            self.toolbarThumbnailImage.image = image;
-        });
-    });
+
 }
 
 - (void)playMedia {

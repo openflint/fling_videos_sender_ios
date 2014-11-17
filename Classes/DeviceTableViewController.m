@@ -18,7 +18,6 @@
 #import "SimpleImageFetcher.h"
 #import <Matchstick/Fling.h>
 
-
 NSString *const CellIdForDeviceName = @"deviceName";
 
 @interface DeviceTableViewController ()
@@ -81,110 +80,7 @@ NSString *const CellIdForDeviceName = @"deviceName";
     static int TagForVolumeSlider = 201;
     
     UITableViewCell *cell;
-//    if (self.matchstickDeviceController.isConnected == NO) {
-//        cell = [tableView dequeueReusableCellWithIdentifier:CellIdForDeviceName forIndexPath:indexPath];
-//
-//        // Configure the cell...
-//        MSFKDevice *device = [self.matchstickDeviceController.deviceScanner.devices objectAtIndex:indexPath.row];
-//
-//        cell.textLabel.text = device.friendlyName;
-//        cell.detailTextLabel.text = device.modelName;
-//
-//    } else if (self.matchstickDeviceController.isPlayingMedia == NO) {
-//        if (indexPath.row == 0) {
-//            cell = [tableView dequeueReusableCellWithIdentifier:CellIdForReadyStatus
-//                                                   forIndexPath:indexPath];
-//        } else if(indexPath.row == 1){
-//            // Display volume control as second cell.
-//            cell = [tableView dequeueReusableCellWithIdentifier:CellIdForVolumeControl
-//                                                   forIndexPath:indexPath];
-//            
-//            _volumeSlider = (UISlider *)[cell.contentView viewWithTag:TagForVolumeSlider];
-//            _volumeSlider.minimumValue = 0;
-//            _volumeSlider.maximumValue = 1.0;
-//            _volumeSlider.value = [self matchstickDeviceController].deviceVolume;
-//            _volumeSlider.continuous = NO;
-//            [_volumeSlider addTarget:self
-//                              action:@selector(sliderValueChanged:)
-//                    forControlEvents:UIControlEventValueChanged];
-//            [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                     selector:@selector(receivedVolumeChangedNotification:)
-//                                                         name:@"Volume changed"
-//                                                       object:[self matchstickDeviceController]];
-//
-//        } else {
-//            cell = [tableView dequeueReusableCellWithIdentifier:CellIdForDisconnectButton
-//                                                   forIndexPath:indexPath];
-//        }
-//
-//    } else {
-//        if (indexPath.row == 0) {
-//            cell = [tableView dequeueReusableCellWithIdentifier:CellIdForPlayerController
-//                                                   forIndexPath:indexPath];
-//            cell.textLabel.text =
-//                    [self.matchstickDeviceController.mediaInformation.metadata stringForKey:kMSFKMetadataKeyTitle];
-//            cell.detailTextLabel.text = [self.matchstickDeviceController.mediaInformation.metadata
-//                    stringForKey:kMSFKMetadataKeySubtitle];
-//
-//            // Accessory is the play/pause button.
-//            BOOL playing = (self.matchstickDeviceController.playerState == MSFKMediaPlayerStatePlaying ||
-//                    self.matchstickDeviceController.playerState == MSFKMediaPlayerStateBuffering);
-//            UIImage *playImage = (playing ? [UIImage imageNamed:@"pause_black.png"]
-//                    : [UIImage imageNamed:@"play_black.png"]);
-//            CGRect frame = CGRectMake(0, 0, playImage.size.width, playImage.size.height);
-//            UIButton *button = [[UIButton alloc] initWithFrame:frame];
-//            [button setBackgroundImage:playImage forState:UIControlStateNormal];
-//            [button addTarget:self
-//                       action:@selector(playPausePressed:)
-//             forControlEvents:UIControlEventTouchUpInside];
-//            cell.accessoryView = button;
-//
-//            // Asynchronously load the table view image
-//            if (self.matchstickDeviceController.mediaInformation.metadata.images.count > 0) {
-//                dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-//
-//                dispatch_async(queue, ^{
-//                    MSFKImage *mediaImage =
-//                            [self.matchstickDeviceController.mediaInformation.metadata.images objectAtIndex:0];
-//                    UIImage *image =
-//                            [UIImage imageWithData:[SimpleImageFetcher getDataFromImageURL:mediaImage.URL]];
-//
-//                    CGSize itemSize = CGSizeMake(40, 40);
-//                    UIImage *thumbnailImage = [self scaleImage:image toSize:itemSize];
-//
-//                    dispatch_sync(dispatch_get_main_queue(), ^{
-//                        UIImageView *mediaThumb = cell.imageView;
-//                        [mediaThumb setImage:thumbnailImage];
-//                        [cell setNeedsLayout];
-//                    });
-//                });
-//            }
-//        } else if(indexPath.row == 1){
-//            // Display volume control as second cell.
-//            cell = [tableView dequeueReusableCellWithIdentifier:CellIdForVolumeControl
-//                                                   forIndexPath:indexPath];
-//            
-//            _volumeSlider = (UISlider *)[cell.contentView viewWithTag:TagForVolumeSlider];
-//            _volumeSlider.minimumValue = 0;
-//            _volumeSlider.maximumValue = 1.0;
-//            _volumeSlider.value = [self matchstickDeviceController].deviceVolume;
-//            _volumeSlider.continuous = NO;
-//            [_volumeSlider addTarget:self
-//                              action:@selector(sliderValueChanged:)
-//                    forControlEvents:UIControlEventValueChanged];
-//            [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                     selector:@selector(receivedVolumeChangedNotification:)
-//                                                         name:@"Volume changed"
-//                                                       object:[self matchstickDeviceController]];
-//
-//        } else {
-//            cell = [tableView dequeueReusableCellWithIdentifier:CellIdForDisconnectButton
-//                                                   forIndexPath:indexPath];
-//        }
-//    }
-    
-    
-    
+
     if (self.matchstickDeviceController.isConnected == NO) {
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdForDeviceName forIndexPath:indexPath];
         

@@ -18,7 +18,6 @@
 #import "SimpleImageFetcher.h"
 #import <Matchstick/Fling.h>
 
-
 @interface FlingViewController () <VolumeChangeControllerDelegate> {
     NSTimeInterval _mediaStartTime;
     BOOL _currentlyDraggingSlider;
@@ -77,8 +76,6 @@
                                     _matchstickController.deviceName];
     self.volumeSlider.minimumValue = 0;
     self.volumeSlider.maximumValue = 1.0;
-    
-    NSLog(@" -getStreamVolume---%f,",_matchstickController.getStreamVolume);
     
     self.volumeSlider.value = _matchstickController.getStreamVolume ?
     _matchstickController.getStreamVolume : 0.5;
