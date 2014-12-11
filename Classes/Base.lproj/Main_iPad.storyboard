@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="vC3-pB-5Vb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="vC3-pB-5Vb">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="348" y="237"/>
         </scene>
-        <!--Fling View Controller-->
+        <!--Flint View Controller-->
         <scene sceneID="sXe-BF-6vK">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="3V5-WW-Hfa" userLabel="Fling View Controller" customClass="FlingViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="3V5-WW-Hfa" userLabel="Flint View Controller" customClass="FlintViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9lq-Eb-OOr"/>
                         <viewControllerLayoutGuide type="bottom" id="JxO-b9-eor"/>
@@ -44,15 +44,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y0R-X2-KdV">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Zwu-y1-U85">
                                 <rect key="frame" x="283" y="921" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flinging to matchstick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-sS-e1e">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flinting to matchstick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s9-sS-e1e">
                                 <rect key="frame" x="246" y="917" width="279" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="279" id="1xo-jx-z4X"/>
                                 </constraints>
@@ -62,7 +59,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for Godot (2009)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngf-jI-Hf4">
                                 <rect key="frame" x="94" y="898" width="581" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,8 +80,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="CuM-TE-5BE"/>
                     <connections>
-                        <outlet property="flingActivityIndicator" destination="Zwu-y1-U85" id="A1B-aD-FO5"/>
-                        <outlet property="flingingToLabel" destination="9s9-sS-e1e" id="Apq-ap-RGe"/>
+                        <outlet property="flintActivityIndicator" destination="Zwu-y1-U85" id="A1B-aD-FO5"/>
+                        <outlet property="flintingToLabel" destination="9s9-sS-e1e" id="Apq-ap-RGe"/>
                         <outlet property="mediaTitleLabel" destination="Ngf-jI-Hf4" id="lfU-aC-gz9"/>
                         <outlet property="thumbnailImage" destination="Y0R-X2-KdV" id="erz-zC-jW3"/>
                         <segue destination="o3F-oB-aD8" kind="modal" identifier="listDevices" modalPresentationStyle="formSheet" id="3cu-ej-St3"/>
@@ -95,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="2109" y="923"/>
         </scene>
-        <!--Local Player View Controller - Detail-->
+        <!--Detail-->
         <scene sceneID="Owj-QC-J23">
             <objects>
                 <viewController title="Detail" hidesBottomBarWhenPushed="YES" id="Ueu-gF-PHW" customClass="LocalPlayerViewController" sceneMemberID="viewController">
@@ -109,14 +105,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-NA-Fje">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="321"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="321" id="2Hd-ZR-U8u"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2we-QB-AXS">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="321"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="play_black.png"/>
                                 <connections>
@@ -125,21 +119,18 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title (2013)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Im-a3-7nM">
                                 <rect key="frame" x="25" y="334" width="658" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBD-vt-tQK">
                                 <rect key="frame" x="25" y="354" width="658" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-yC-iiB">
                                 <rect key="frame" x="20" y="384" width="728" height="576"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -176,7 +167,7 @@
                         <outlet property="mediaSubtitle" destination="qBD-vt-tQK" id="lzF-f2-hmI"/>
                         <outlet property="mediaTitle" destination="4Im-a3-7nM" id="hfS-qJ-SVI"/>
                         <outlet property="playPauseButton" destination="2we-QB-AXS" id="Hvs-ai-SiD"/>
-                        <segue destination="3V5-WW-Hfa" kind="push" identifier="flingMedia" id="cwu-Wa-FY8"/>
+                        <segue destination="3V5-WW-Hfa" kind="push" identifier="flintMedia" id="cwu-Wa-FY8"/>
                         <segue destination="o3F-oB-aD8" kind="modal" identifier="listDevices" modalPresentationStyle="formSheet" id="QLF-76-pa5"/>
                     </connections>
                 </viewController>
@@ -202,20 +193,17 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matchstick: For Bigger Blazes" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="477" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-xn-euv">
                                             <rect key="frame" x="136" y="3" width="477" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google, Inc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E9-Kj-nhW">
                                             <rect key="frame" x="136" y="46" width="164" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znC-Lz-6zC">
                                             <rect key="frame" x="20" y="3" width="102" height="64"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -232,7 +220,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Ueu-gF-PHW" kind="push" identifier="playMedia" id="uI3-gE-WRU"/>
-                        <segue destination="3V5-WW-Hfa" kind="push" identifier="flingMedia" id="jmc-QK-zd2"/>
+                        <segue destination="3V5-WW-Hfa" kind="push" identifier="flintMedia" id="jmc-QK-zd2"/>
                         <segue destination="o3F-oB-aD8" kind="modal" identifier="listDevices" modalPresentationStyle="formSheet" id="BQN-oa-CRg"/>
                     </connections>
                 </tableViewController>
@@ -240,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="1224" y="237"/>
         </scene>
-        <!--Device Table View Controller - Connect to-->
+        <!--Connect to-->
         <scene sceneID="LA1-D8-TYT">
             <objects>
                 <tableViewController id="b3I-lG-UG9" customClass="DeviceTableViewController" sceneMemberID="viewController">
@@ -282,7 +270,6 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2p-c0-w8X">
                                             <rect key="frame" x="110" y="7" width="320" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Disconnect">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -300,7 +287,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ready to fling videos from this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="Rlv-L3-3ie">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ready to flint videos from this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="Rlv-L3-3ie">
                                             <rect key="frame" x="15" y="0.0" width="510" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>

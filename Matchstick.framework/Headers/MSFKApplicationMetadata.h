@@ -16,8 +16,8 @@
 
 @property(nonatomic,copy,readonly) NSDictionary *additionalData;
 
-/** The application's ID. */
-@property(nonatomic, copy, readonly) NSString *applicationID;
+/** The application's URL. */
+@property(nonatomic, copy, readonly) NSString *applicationURL;
 
 /** The session's ID. */
 @property(nonatomic, copy, readonly) NSString *sessionID;

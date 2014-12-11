@@ -16,7 +16,7 @@
 #import "DeviceTableViewController.h"
 #import "MatchstickDeviceController.h"
 #import "SimpleImageFetcher.h"
-#import <Matchstick/Fling.h>
+#import <Matchstick/Flint.h>
 
 NSString *const CellIdForDeviceName = @"deviceName";
 
@@ -210,7 +210,7 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
 - (void)playPausePressed:(id)sender {
     BOOL playing = (self.matchstickDeviceController.playerState == MSFKMediaPlayerStatePlaying ||
             self.matchstickDeviceController.playerState == MSFKMediaPlayerStateBuffering);
-    [self.matchstickDeviceController pauseFlingMedia:playing];
+    [self.matchstickDeviceController pauseFlintMedia:playing];
 
     // change the icon.
     UIButton *button = sender;

@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Fling View Controller-->
+        <!--Flint View Controller-->
         <scene sceneID="u6e-mf-Khc">
             <objects>
-                <viewController id="U2n-uD-72t" userLabel="Fling View Controller" customClass="FlingViewController" sceneMemberID="viewController">
+                <viewController id="U2n-uD-72t" userLabel="Flint View Controller" customClass="FlintViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cFL-7T-YrE"/>
                         <viewControllerLayoutGuide type="bottom" id="2mz-kJ-dwu"/>
@@ -44,29 +44,29 @@
                             <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ma0-x3-mBq">
                                 <rect key="frame" x="0.0" y="0.0" width="321" height="568"/>
                             </imageView>
-                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hic-vP-c6B" userLabel="Volume controls">
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hic-vP-c6B" userLabel="Volume controls">
                                 <rect key="frame" x="55" y="100" width="210" height="106"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Volume" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="01l-E0-9kQ">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="01l-E0-9kQ">
                                         <rect key="frame" x="10" y="10" width="190" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hfr-Gu-kuE">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hfr-Gu-kuE">
                                         <rect key="frame" x="38" y="46" width="134" height="31"/>
                                         <connections>
                                             <action selector="showVolumeSlider:" destination="U2n-uD-72t" eventType="valueChanged" id="Bsq-n7-Ema"/>
                                         </connections>
                                     </slider>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_volume3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ynu-hF-3uT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_volume3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ynu-hF-3uT">
                                         <rect key="frame" x="180" y="51" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="41H-1g-Ps5"/>
                                             <constraint firstAttribute="height" constant="20" id="Bct-tC-CTn"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_volume0.png" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-l8-zqQ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_volume0.png" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-l8-zqQ">
                                         <rect key="frame" x="20" y="51" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="4mH-om-G8u"/>
@@ -86,19 +86,21 @@
                                     <constraint firstItem="01l-E0-9kQ" firstAttribute="leading" secondItem="Hic-vP-c6B" secondAttribute="leading" constant="10" id="h5t-G3-AhY"/>
                                     <constraint firstAttribute="height" constant="106" id="iU6-19-6bM"/>
                                     <constraint firstAttribute="centerX" secondItem="01l-E0-9kQ" secondAttribute="centerX" id="kyO-8q-eYd"/>
+                                    <constraint firstItem="hfr-Gu-kuE" firstAttribute="centerY" secondItem="dg9-l8-zqQ" secondAttribute="centerY" id="sFt-Dj-zbx"/>
                                     <constraint firstItem="hfr-Gu-kuE" firstAttribute="leading" secondItem="Hic-vP-c6B" secondAttribute="leading" constant="40" id="sgg-3n-e9g"/>
                                     <constraint firstAttribute="trailing" secondItem="01l-E0-9kQ" secondAttribute="trailing" constant="10" id="tY2-3X-eJW"/>
                                     <constraint firstItem="01l-E0-9kQ" firstAttribute="bottom" secondItem="hfr-Gu-kuE" secondAttribute="top" constant="-15" id="vYC-fy-HOa"/>
+                                    <constraint firstAttribute="bottom" secondItem="hfr-Gu-kuE" secondAttribute="bottom" constant="30" id="w9t-WC-iIy"/>
                                     <constraint firstItem="01l-E0-9kQ" firstAttribute="top" secondItem="Hic-vP-c6B" secondAttribute="top" constant="10" id="yL0-9f-eMe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flinging to MatchStick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="135" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-zs-Kw9">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flinting to MatchStick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="135" translatesAutoresizingMaskIntoConstraints="NO" id="gJl-zs-Kw9">
                                 <rect key="frame" x="93" y="496" width="135" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="o7v-vW-Xai">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="o7v-vW-Xai">
                                 <rect key="frame" x="65" y="494" width="20" height="20"/>
                             </activityIndicatorView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for Godot (2009)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmh-ea-aVI">
@@ -110,6 +112,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Hic-vP-c6B" firstAttribute="centerX" secondItem="Cmh-ea-aVI" secondAttribute="centerX" id="1Ix-R7-PSy"/>
                             <constraint firstItem="gJl-zs-Kw9" firstAttribute="top" secondItem="Cmh-ea-aVI" secondAttribute="bottom" constant="8" symbolic="YES" id="76R-Oe-IBu"/>
                             <constraint firstItem="ma0-x3-mBq" firstAttribute="top" secondItem="Uau-mR-0kl" secondAttribute="top" id="CR9-hR-GDn"/>
                             <constraint firstItem="gJl-zs-Kw9" firstAttribute="leading" secondItem="o7v-vW-Xai" secondAttribute="trailing" constant="8" symbolic="YES" id="Em8-Yh-aD1"/>
@@ -118,6 +121,7 @@
                             <constraint firstItem="gJl-zs-Kw9" firstAttribute="centerX" secondItem="ma0-x3-mBq" secondAttribute="centerX" id="ODe-VA-Ki9"/>
                             <constraint firstItem="Cmh-ea-aVI" firstAttribute="centerX" secondItem="gJl-zs-Kw9" secondAttribute="centerX" id="PoU-kd-rZz"/>
                             <constraint firstAttribute="bottom" secondItem="ma0-x3-mBq" secondAttribute="bottom" id="Wrc-zB-Hd6"/>
+                            <constraint firstItem="Hic-vP-c6B" firstAttribute="top" secondItem="cFL-7T-YrE" secondAttribute="bottom" constant="36" id="Y4m-Wf-NQ9"/>
                             <constraint firstItem="gJl-zs-Kw9" firstAttribute="centerY" secondItem="o7v-vW-Xai" secondAttribute="centerY" id="eMH-jD-0UY"/>
                             <constraint firstItem="ma0-x3-mBq" firstAttribute="leading" secondItem="Uau-mR-0kl" secondAttribute="leading" id="hNW-qx-Ivx"/>
                             <constraint firstItem="gJl-zs-Kw9" firstAttribute="centerX" secondItem="Uau-mR-0kl" secondAttribute="centerX" id="jjv-qC-Xcd"/>
@@ -127,8 +131,8 @@
                     <navigationItem key="navigationItem" id="VA2-gs-4Kz"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="flingActivityIndicator" destination="o7v-vW-Xai" id="xeN-6T-JPi"/>
-                        <outlet property="flingingToLabel" destination="gJl-zs-Kw9" id="tSF-Rx-NSl"/>
+                        <outlet property="flintActivityIndicator" destination="o7v-vW-Xai" id="xeN-6T-JPi"/>
+                        <outlet property="flintingToLabel" destination="gJl-zs-Kw9" id="tSF-Rx-NSl"/>
                         <outlet property="mediaTitleLabel" destination="Cmh-ea-aVI" id="9aE-z2-Lx1"/>
                         <outlet property="thumbnailImage" destination="ma0-x3-mBq" id="t6s-Tz-VrZ"/>
                         <outlet property="volumeControls" destination="Hic-vP-c6B" id="Ae1-Ob-Mly"/>
@@ -189,7 +193,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="Ah7-4n-0Wa" kind="push" identifier="playMedia" id="SIC-cU-79j"/>
-                        <segue destination="U2n-uD-72t" kind="push" identifier="flingMedia" id="H08-Zb-dfr"/>
+                        <segue destination="U2n-uD-72t" kind="push" identifier="flintMedia" id="H08-Zb-dfr"/>
                         <segue destination="h5I-e4-wno" kind="modal" identifier="listDevices" id="aqX-wX-tnU"/>
                     </connections>
                 </tableViewController>
@@ -279,7 +283,7 @@
                         <outlet property="mediaTitle" destination="kSw-SA-cYc" id="Zb3-n8-8dX"/>
                         <outlet property="playPauseButton" destination="Mvu-ZE-r2L" id="3Sj-xH-7Fr"/>
                         <segue destination="h5I-e4-wno" kind="modal" identifier="listDevices" id="90r-3M-ZWY"/>
-                        <segue destination="U2n-uD-72t" kind="push" identifier="flingMedia" id="6Fd-4N-yQo"/>
+                        <segue destination="U2n-uD-72t" kind="push" identifier="flintMedia" id="6Fd-4N-yQo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -391,7 +395,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ready to fling videos from this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="4YR-8q-20n">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ready to flint videos from this app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="4YR-8q-20n">
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -477,7 +481,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="H08-Zb-dfr"/>
         <segue reference="BYP-uC-I0y"/>
+        <segue reference="6Fd-4N-yQo"/>
     </inferredMetricsTieBreakers>
 </document>

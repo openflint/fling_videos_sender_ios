@@ -14,7 +14,7 @@
 
 #import "MatchstickDeviceController.h"
 #import "SimpleImageFetcher.h"
-#import <Matchstick/Fling.h>
+#import <Matchstick/Flint.h>
 
 static NSString *kReceiverAppID;  //Replace with your app id
 static NSString *kReceiverAppURL; //Receiver app url
@@ -70,7 +70,7 @@ static NSString *kReceiverAppURL; //Receiver app url
         // Initialize UI controls for navigation bar and tool bar.
         [self initControls];
         
-        _queue = dispatch_queue_create("tv.matchstick.sample.Fling", NULL);
+        _queue = dispatch_queue_create("tv.matchstick.sample.Flint", NULL);
         
     }
     return self;
@@ -127,7 +127,7 @@ static NSString *kReceiverAppURL; //Receiver app url
 
     [self.deviceManager connect];
     
-    // Start animating the fling connect images.
+    // Start animating the flint connect images.
     UIButton *matchstickButton = (UIButton *) self.matchstickBarButton.customView;
     matchstickButton.tintColor = [UIColor whiteColor];
     matchstickButton.imageView.animationImages =
@@ -193,7 +193,7 @@ static NSString *kReceiverAppURL; //Receiver app url
     }
 }
 
-- (void)pauseFlingMedia:(BOOL)shouldPause {
+- (void)pauseFlintMedia:(BOOL)shouldPause {
     if (self.isConnected && self.mediaControlChannel && self.mediaControlChannel.mediaStatus) {
         if (shouldPause) {
             [self.mediaControlChannel pause];
@@ -208,9 +208,9 @@ static NSString *kReceiverAppURL; //Receiver app url
     [self.deviceManager disconnect];
 }
 
-- (void)stopFlingMedia {
+- (void)stopFlintMedia {
     if (self.isConnected && self.mediaControlChannel && self.mediaControlChannel.mediaStatus) {
-        NSLog(@"Telling fling media control channel to stop");
+        NSLog(@"Telling flint media control channel to stop");
         [self.mediaControlChannel stop];
     }
 }
@@ -225,7 +225,7 @@ static NSString *kReceiverAppURL; //Receiver app url
 }
 
 - (void)      deviceManager:(MSFKDeviceManager *)deviceManager
-didConnectToFlingApplication:(MSFKApplicationMetadata *)applicationMetadata
+didConnectToFlintApplication:(MSFKApplicationMetadata *)applicationMetadata
         launchedApplication:(BOOL)launchedApplication {
     
     NSLog(@"application has launched");
@@ -235,7 +235,7 @@ didConnectToFlingApplication:(MSFKApplicationMetadata *)applicationMetadata
     [self.mediaControlChannel requestStatus];
     
     self.applicationMetadata = applicationMetadata;
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
     
     if ([self.delegate respondsToSelector:@selector(didConnectToDevice:)]) {
         [self.delegate didConnectToDevice:self.selectedDevice];
@@ -255,7 +255,7 @@ didFailToConnectToApplicationWithError:(NSError *)error {
     UIButton *matchstickButton = (UIButton *) self.matchstickBarButton.customView;
     [matchstickButton.imageView stopAnimating];
     [self deviceDisconnected];
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
     // Hook to hardware volume controls.
     if (_features & MatchstickControllerFeatureHWVolumeControl) {
         [self.volumeChangeController releaseVolumeButtons];
@@ -272,7 +272,7 @@ didDisconnectFromApplicationWithError:(NSError *)error
     [matchstickButton.imageView stopAnimating];
     
     [self deviceDisconnected];
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
     // Hook to hardware volume controls.
     if (_features & MatchstickControllerFeatureHWVolumeControl) {
         [self.volumeChangeController releaseVolumeButtons];
@@ -288,7 +288,7 @@ didFailToConnectWithError:(MSFKError *)error {
     UIButton *matchstickButton = (UIButton *) self.matchstickBarButton.customView;
     [matchstickButton.imageView stopAnimating];
     [self deviceDisconnected];
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
     // Hook to hardware volume controls.
     if (_features & MatchstickControllerFeatureHWVolumeControl) {
         [self.volumeChangeController releaseVolumeButtons];
@@ -305,7 +305,7 @@ didFailToConnectWithError:(MSFKError *)error {
     [matchstickButton.imageView stopAnimating];
     
     [self deviceDisconnected];
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
     
 }
 
@@ -333,7 +333,7 @@ volumeDidChangeToLevel:(float)volumeLevel
 #pragma mark - MSFKDeviceScannerListener
 - (void)deviceDidComeOnline:(MSFKDevice *)device {
     NSLog(@"device found!! %@ ... %@", device.friendlyName,device.ipAddress);
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
     if(self.delegate) {
         if ([self.delegate respondsToSelector:@selector(didDiscoverDeviceOnNetwork)]) {
             [self.delegate didDiscoverDeviceOnNetwork];
@@ -343,7 +343,7 @@ volumeDidChangeToLevel:(float)volumeLevel
 }
 
 - (void)deviceDidGoOffline:(MSFKDevice *)device {
-    [self updateFlingIconButtonStates];
+    [self updateFlintIconButtonStates];
 }
 
 #pragma - MSFKMediaControlChannelDelegate methods
@@ -515,7 +515,7 @@ didCompleteLoadWithSessionID:(NSInteger)sessionID {
     }
 }
 
-- (void)updateFlingIconButtonStates {
+- (void)updateFlintIconButtonStates {
     // Hide the button if there are no devices found.
     UIButton *matchstickButton = (UIButton *) self.matchstickBarButton.customView;
     if (self.deviceScanner.devices.count == 0) {
@@ -594,11 +594,11 @@ didCompleteLoadWithSessionID:(NSInteger)sessionID {
 }
 
 - (void)playMedia {
-    [self pauseFlingMedia:NO];
+    [self pauseFlintMedia:NO];
 }
 
 - (void)pauseMedia {
-    [self pauseFlingMedia:YES];
+    [self pauseFlintMedia:YES];
 }
 
 - (void)showMedia {

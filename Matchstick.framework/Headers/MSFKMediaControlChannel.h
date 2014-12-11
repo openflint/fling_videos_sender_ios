@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MSFKFlingChannel.h"
+#import "MSFKFlintChannel.h"
 @class MSFKMediaInformation;
 @class MSFKMediaStatus;
 
@@ -38,11 +38,11 @@ typedef NS_ENUM(NSInteger, MSFKMediaControlChannelResumeState) {
 };
 
 /**
- * A FlingChannel for media control operations.
+ * A FlintChannel for media control operations.
  *
  * @ingroup MediaControl
  */
-@interface MSFKMediaControlChannel : MSFKFlingChannel{
+@interface MSFKMediaControlChannel : MSFKFlintChannel {
 
 }
 

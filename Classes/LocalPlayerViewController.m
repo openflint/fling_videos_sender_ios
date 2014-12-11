@@ -14,9 +14,9 @@
 
 #import "AppDelegate.h"
 #import "LocalPlayerViewController.h"
-#import "FlingViewController.h"
+#import "FlintViewController.h"
 #import "SimpleImageFetcher.h"
-#import <Matchstick/Fling.h>
+#import <Matchstick/Flint.h>
 
 #define MOVIE_CONTAINER_TAG 1
 
@@ -46,8 +46,8 @@
 
 #pragma mark State management
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"flingMedia"]) {
-        [(FlingViewController *) [segue destinationViewController] setMediaToPlay:self.mediaToPlay
+    if ([[segue identifier] isEqualToString:@"flintMedia"]) {
+        [(FlintViewController *) [segue destinationViewController] setMediaToPlay:self.mediaToPlay
                                                                 withStartingTime:lastKnownPlaybackTime];
     }
 }
@@ -55,9 +55,9 @@
 - (IBAction)playPauseButtonPressed:(id)sender {
     if (_matchstickController.isConnected) {
         if (self.playPauseButton.selected == NO) {
-            [_matchstickController pauseFlingMedia:NO];
+            [_matchstickController pauseFlintMedia:NO];
         }
-        [self performSegueWithIdentifier:@"flingMedia" sender:self];
+        [self performSegueWithIdentifier:@"flintMedia" sender:self];
     } else {
         [self playMovieIfExists];
     }
@@ -173,7 +173,7 @@
     AppDelegate *delegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     _matchstickController = delegate.matchstickDeviceController;
 
-    //Add fling button
+    //Add flint button
     if (_matchstickController.deviceScanner.devices.count > 0) {
         self.navigationItem.rightBarButtonItem = _matchstickController.matchstickBarButton;
     }
@@ -253,7 +253,7 @@
 - (void)didConnectToDevice:(MSFKDevice *)device {
     lastKnownPlaybackTime = [self.moviePlayer currentPlaybackTime];
     [self.moviePlayer stop];
-    [self performSegueWithIdentifier:@"flingMedia" sender:self];
+    [self performSegueWithIdentifier:@"flintMedia" sender:self];
 }
 
 /**
@@ -271,7 +271,7 @@
 }
 
 /**
- * Called to display the modal device view controller from the fling icon.
+ * Called to display the modal device view controller from the flint icon.
  */
 - (void)shouldDisplayModalDeviceController {
     [self performSegueWithIdentifier:@"listDevices" sender:self];
@@ -281,7 +281,7 @@
  * Called to display the remote media playback view controller.
  */
 - (void)shouldPresentPlaybackController {
-    [self performSegueWithIdentifier:@"flingMedia" sender:self];
+    [self performSegueWithIdentifier:@"flintMedia" sender:self];
 }
 
 #pragma mark - Implementation

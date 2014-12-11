@@ -15,7 +15,7 @@
 #import <UIKit/UIKit.h>
 
 #import "MatchstickDeviceController.h"
-#import <Matchstick/Fling.h>
+#import <Matchstick/Flint.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, MSFKLoggerDelegate>
 

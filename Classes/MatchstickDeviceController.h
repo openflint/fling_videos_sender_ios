@@ -15,7 +15,7 @@
 #import <Foundation/Foundation.h>
 #import "Media.h"
 #import "VolumeChangeController.h"
-#import <Matchstick/Fling.h>
+#import <Matchstick/Flint.h>
 
 typedef NS_ENUM(NSInteger, MatchstickControllerFeatures) {
     // Constant for no features.
@@ -59,7 +59,7 @@ typedef NS_ENUM(NSInteger, MatchstickControllerFeatures) {
 - (void)didReceiveMediaStateChange;
 
 /**
- * Called to display the modal device view controller from the fling icon.
+ * Called to display the modal device view controller from the flint icon.
  */
 - (void)shouldDisplayModalDeviceController;
 
@@ -142,7 +142,7 @@ typedef NS_ENUM(NSInteger, MatchstickControllerFeatures) {
 - (BOOL)isPlayingMedia;
 
 /** Pause or play the currently loaded media on the Matchstick device. */
-- (void)pauseFlingMedia:(BOOL)shouldPause;
+- (void)pauseFlintMedia:(BOOL)shouldPause;
 
 /** Request an update of media playback stats from the Matchstick device. */
 - (void)updateStatsFromDevice;
@@ -151,7 +151,7 @@ typedef NS_ENUM(NSInteger, MatchstickControllerFeatures) {
 - (void)setPlaybackPercent:(float)newPercent;
 
 /** Stops the media playing on the Matchstick device. */
-- (void)stopFlingMedia;
+- (void)stopFlintMedia;
 
 /** Increase or decrease the volume on the Matchstick device. */
 - (void)changeVolumeIncrease:(BOOL)goingUp;

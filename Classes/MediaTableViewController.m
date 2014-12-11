@@ -18,7 +18,7 @@
 #import "SimpleImageFetcher.h"
 #import "Media.h"
 #import "MediaListModel.h"
-#import <Matchstick/Fling.h>
+#import <Matchstick/Flint.h>
 
 @interface MediaTableViewController () {
     __weak MatchstickDeviceController *_matchstickDeviceController;
@@ -50,7 +50,7 @@
     self.navigationItem.titleView =
             [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo_castvideos.png"]];
 
-    // Display fling icon in the right nav bar button, if we have devices.
+    // Display flint icon in the right nav bar button, if we have devices.
     if (_matchstickDeviceController.deviceScanner.devices.count > 0) {
         self.navigationItem.rightBarButtonItem = _matchstickDeviceController.matchstickBarButton;
     }
@@ -133,7 +133,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"flingMedia"] ||
+    if ([[segue identifier] isEqualToString:@"flintMedia"] ||
             [[segue identifier] isEqualToString:@"playMedia"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Media *media = [self.mediaList mediaAtIndex:indexPath.row];
@@ -175,7 +175,7 @@
 }
 
 /**
- * Called to display the modal device view controller from the fling icon.
+ * Called to display the modal device view controller from the flint icon.
  */
 - (void)shouldDisplayModalDeviceController {
     [self performSegueWithIdentifier:@"listDevices" sender:self];
@@ -196,7 +196,7 @@
             [self.tableView selectRowAtIndexPath:indexPath
                                         animated:YES
                                   scrollPosition:UITableViewScrollPositionNone];
-            [self performSegueWithIdentifier:@"flingMedia" sender:self];
+            [self performSegueWithIdentifier:@"flintMedia" sender:self];
             break;
         }
     };

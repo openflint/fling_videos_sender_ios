@@ -202,8 +202,8 @@ extern NSString *const kMSFKMetadataKeyLocationLongitude;
  * representation of a date and time. Attempting to store a value of an incorrect type in a field
  * will assert.
  * <p>
- * Note that the Fling protocol limits which metadata fields can be used for a given media type.
- * When a MediaMetadata object is serialized to JSON for delivery to a Fling receiver, any
+ * Note that the Flint protocol limits which metadata fields can be used for a given media type.
+ * When a MediaMetadata object is serialized to JSON for delivery to a Flint receiver, any
  * predefined fields which are not supported for a given media type will not be included in the
  * serialized form, but any application-defined fields will always be included.
  */

@@ -5,7 +5,7 @@
 //  Copyright (C) 2013-2014, Infthink (Beijing) Technology Co., Ltd.
 //
 
-@class MSFKFlingChannel;
+@class MSFKFlintChannel;
 @class MSFKDevice;
 @class MSFKApplicationMetadata;
 @class MSFKHeartbeatChannel;
@@ -100,7 +100,7 @@
  * @return YES if the channel was added, NO if it was not added because there was already
  * a channel attached for that namespace.
  */
-- (BOOL)addChannel:(MSFKFlingChannel *)channel;
+- (BOOL)addChannel:(MSFKFlintChannel *)channel;
 
 /**
  * Removes a previously added channel.
@@ -109,7 +109,7 @@
  * @return YES if the channel was removed, NO if it was not removed because the given
  * channel was not previously attached.
  */
-- (BOOL)removeChannel:(MSFKFlingChannel *)channel;
+- (BOOL)removeChannel:(MSFKFlintChannel *)channel;
 
 #pragma mark Applications
 
@@ -131,6 +131,19 @@
  */
 - (BOOL)launchApplication:(NSString *)applicationURL
         relaunchIfRunning:(BOOL)relaunchIfRunning;
+
+/**
+ * Launches an application, optionally relaunching it if it is already running.
+ *
+ * @param applicationURL The application url.
+ * @param relaunchIfRunning If YES, relaunches the application if it is already running instead of
+ * joining the running applicaiton.
+ * @param useIpc If YES, sender and receiver apps use WebSocket
+ * @return NO if the message could not be sent.
+ */
+- (BOOL)launchApplication:(NSString *)applicationURL
+        relaunchIfRunning:(BOOL)relaunchIfRunning
+                   useIpc:(BOOL)useIpc;
 
 /**
  * Joins an application.
@@ -176,7 +189,7 @@
  * currently connected to an application, and may cause a device volume callback, if the
  * device volume has changed.
  *
- * @return The request ID, or <code>kGCKInvalidRequestID</code> if the request could not be sent.
+ * @return The request ID, or <code>kMSFKInvalidRequestID</code> if the request could not be sent.
  */
 - (NSInteger)requestDeviceStatus;
 
@@ -231,7 +244,7 @@ didDisconnectWithError:(NSError *)error;
  * if the application was already running and was joined.
  */
 - (void)      deviceManager:(MSFKDeviceManager *)deviceManager
-didConnectToFlingApplication:(MSFKApplicationMetadata *)applicationMetadata
+didConnectToFlintApplication:(MSFKApplicationMetadata *)applicationMetadata
         launchedApplication:(BOOL)launchedApplication;
 
 /**
